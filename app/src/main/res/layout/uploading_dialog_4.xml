@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/_30sdp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@color/white"
+        >
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Uploading"
+            android:textSize="@dimen/_18sdp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/kumbh_sans"
+            android:layout_marginEnd="@dimen/_10sdp"
+            />
+        <ProgressBar
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="@dimen/_22sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:indeterminateTint="@color/colorPrimary"
+            />
+
+</LinearLayout>

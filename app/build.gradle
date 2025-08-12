@@ -1,0 +1,81 @@
+plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.google.gms.google.services)
+}
+apply plugin: 'kotlin-kapt'
+android {
+    namespace 'com.example.bicel'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.bicel"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+buildFeatures{
+    viewBinding = true
+    dataBinding = true
+}
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation libs.androidx.core.ktx
+    implementation libs.androidx.appcompat
+    implementation libs.material
+    implementation libs.androidx.activity
+    implementation libs.androidx.constraintlayout
+    implementation libs.firebase.storage
+    implementation libs.androidx.annotation
+    implementation libs.firebase.auth
+    implementation libs.firebase.firestore.ktx
+    implementation libs.firebase.database
+    implementation libs.androidx.lifecycle.viewmodel.android
+//    Test
+    testImplementation libs.junit
+    androidTestImplementation libs.androidx.junit
+    androidTestImplementation libs.androidx.espresso.core
+    // Kotlin Couroutines
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0-RC") // Android Specific
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0-RC") // Couroutine
+    // Splash Screen
+    implementation "androidx.core:core-splashscreen:1.0.1"
+    //    Sdp Unit
+    implementation 'com.intuit.sdp:sdp-android:1.1.1'
+    // Navigation
+    implementation libs.androidx.navigation.fragment
+    // circular Image
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
+    // Image Picker
+    implementation 'com.github.dhaval2404:imagepicker:2.1'
+    // Lottie Animations
+    implementation "com.airbnb.android:lottie:6.4.1"
+    //Picasso
+    implementation 'com.squareup.picasso:picasso:2.8'
+    // Swipe Refresh Layout
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.2.0-alpha01"
+    // Shimmer
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+
+
+}

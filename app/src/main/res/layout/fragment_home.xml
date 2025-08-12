@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeRefreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    tools:context=".fragments.Home">
+<ScrollView
+    android:id="@+id/homeScroll"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    >
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/_20sdp"
+        >
+
+        <LinearLayout
+            android:id="@+id/app_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bicel_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/cinzel_bold"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/_30sdp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/locationTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:background="@drawable/location_tv_bg_2"
+            android:gravity="start"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_10sdp"
+            app:layout_constraintEnd_toStartOf="@id/notificationBtn"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/app_name">
+
+            <ImageView
+                android:layout_width="@dimen/_17sdp"
+                android:layout_height="@dimen/_17sdp"
+                android:layout_marginRight="@dimen/_3sdp"
+                android:src="@drawable/location_icon_2" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawablePadding="7dp"
+                android:fontFamily="@font/poppins"
+                android:singleLine="true"
+                android:text="canttRawalpindi Wah canttWah canttWah canttcanttWah canttcanttWah canttcanttWah canttcanttWah canttcanttWah cantt"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <ImageView
+                android:layout_width="@dimen/_17sdp"
+                android:layout_height="@dimen/_17sdp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:src="@drawable/down_arrow_icon_2" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/notificationBtn"
+            android:layout_width="@dimen/_23sdp"
+            android:layout_height="@dimen/_23sdp"
+            android:layout_marginRight="@dimen/_7sdp"
+            android:src="@drawable/notification_icon_2"
+            app:layout_constraintBottom_toBottomOf="@id/locationTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/locationTv" />
+
+        <LinearLayout
+            android:id="@+id/Homesearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/search_bg_2"
+            android:clickable="true"
+            android:gravity="start|center_vertical"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/_6sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/locationTv">
+
+            <ImageView
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:src="@drawable/search_icon_2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:fontFamily="@font/poppins"
+                android:gravity="center_vertical"
+                android:text="@string/home_search"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11sdp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/shimmerLayout"
+            android:layout_width="match_parent"
+            app:layout_constraintHeight_min="@dimen/_500sdp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:gravity="start"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:elevation="1dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recentSearchRv"
+            >
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+            <include layout="@layout/home_shimmer"/>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recentSearchRv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/_10sdp"
+            android:scrollbars="none"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Homesearch" />
+
+        <TextView
+            android:id="@+id/bcTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/categoriesHeading"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_17sdp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recentSearchRv" />
+
+        <TextView
+            android:id="@+id/seeAllCatBtn"
+            style="@style/homeCategorySeeAllText"
+            app:layout_constraintBottom_toBottomOf="@id/bcTv"
+            app:layout_constraintTop_toTopOf="@id/bcTv" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/categoriesRv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="horizontal"
+            android:overScrollMode="never"
+            android:paddingEnd="@dimen/_10sdp"
+            android:scrollbars="none"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bcTv" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_200sdp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/categoriesRv">
+<!--    Mobiles , Cars , Motorcycles , Houses, Computers-->
+<!--            Mobiles Category -->
+            <androidx.constraintlayout.widget.ConstraintLayout style="@style/homeCategoryRow">
+
+                <TextView
+                    android:id="@+id/mobCatHeading"
+                    style="@style/homeCategoryHeadingText"
+                    android:text="Mobile Phones"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/seeAllMob"
+                    style="@style/homeCategorySeeAllText"
+                    app:layout_constraintBottom_toBottomOf="@id/mobCatHeading"
+                    app:layout_constraintTop_toTopOf="@id/mobCatHeading"
+
+                    />
+                <TextView
+                    style="@style/NoCategoryAdsTv"
+                    android:id="@+id/noMobileAdsTv"
+                    app:layout_constraintTop_toBottomOf="@id/mobCatHeading"
+                    />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/mobCatRv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/_10sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/mobCatHeading" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+<!--        Cars Category -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                style="@style/homeCategoryRow">
+
+                <TextView
+                    android:id="@+id/carCatHeading"
+                    style="@style/homeCategoryHeadingText"
+                    android:text="Cars"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/seeAllCar"
+                    style="@style/homeCategorySeeAllText"
+                    app:layout_constraintBottom_toBottomOf="@id/carCatHeading"
+                    app:layout_constraintTop_toTopOf="@id/carCatHeading"
+
+                    />
+                <TextView
+                    style="@style/NoCategoryAdsTv"
+                    android:id="@+id/noCarAdsTv"
+                    app:layout_constraintTop_toBottomOf="@id/carCatHeading"
+                    />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/carCatRv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/_10sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/carCatHeading" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+<!--        MotorCycles Category            -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                style="@style/homeCategoryRow">
+
+                <TextView
+                    android:id="@+id/motorCatHeading"
+                    style="@style/homeCategoryHeadingText"
+                    android:text="Motorcycles"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/seeAllMotor"
+                    style="@style/homeCategorySeeAllText"
+                    app:layout_constraintBottom_toBottomOf="@id/motorCatHeading"
+                    app:layout_constraintTop_toTopOf="@id/motorCatHeading"
+
+                    />
+                <TextView
+                    style="@style/NoCategoryAdsTv"
+                    android:id="@+id/noMotorAdsTv"
+                    app:layout_constraintTop_toBottomOf="@id/motorCatHeading"
+                    />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/motorCatRv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/_10sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/motorCatHeading" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+<!--                Houses Category-->
+            <androidx.constraintlayout.widget.ConstraintLayout style="@style/homeCategoryRow">
+
+                <TextView
+                    android:id="@+id/houseCatHeading"
+                    style="@style/homeCategoryHeadingText"
+                    android:text="Houses"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/seeAllHouse"
+                    style="@style/homeCategorySeeAllText"
+                    app:layout_constraintBottom_toBottomOf="@id/houseCatHeading"
+                    app:layout_constraintTop_toTopOf="@id/houseCatHeading"
+
+                    />
+                <TextView
+                    style="@style/NoCategoryAdsTv"
+                    android:id="@+id/noHouseAdsTv"
+                    app:layout_constraintTop_toBottomOf="@id/houseCatHeading"
+                    />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/houseCatRv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/_10sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/houseCatHeading" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!--                Computers Category-->
+            <androidx.constraintlayout.widget.ConstraintLayout style="@style/homeCategoryRow">
+
+                <TextView
+                    android:id="@+id/pcCatHeading"
+                    style="@style/homeCategoryHeadingText"
+                    android:text="Computers"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/SeeAllPc"
+                    style="@style/homeCategorySeeAllText"
+                    app:layout_constraintBottom_toBottomOf="@id/pcCatHeading"
+                    app:layout_constraintTop_toTopOf="@id/pcCatHeading"
+
+                    />
+                <TextView
+                    style="@style/NoCategoryAdsTv"
+                    android:id="@+id/noPcAdsTv"
+                    app:layout_constraintTop_toBottomOf="@id/pcCatHeading"
+                    />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/pcCatRv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/_10sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/pcCatHeading" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

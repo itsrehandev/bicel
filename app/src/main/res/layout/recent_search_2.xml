@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/_35sdp"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:paddingHorizontal="@dimen/_12sdp"
+    android:background="@drawable/search_bg_2"
+    android:layout_marginLeft="@dimen/_10sdp"
+    android:elevation="2dp"
+    android:clickable="true"
+    >
+    <ImageView
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_15sdp"
+        android:layout_marginTop="2dp"
+        android:backgroundTint="@color/dark_grey"
+        android:src="@drawable/history_icon_2"/>
+    <TextView
+        android:id="@+id/recentSearchTv"
+        android:layout_marginLeft="@dimen/_8sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_11sdp"
+        android:textColor="@color/dark_grey"
+        android:text="You searched this"
+        />
+</LinearLayout>

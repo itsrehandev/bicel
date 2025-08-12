@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Bicel</string>
+    <!--    Bottom Navigation items -->
+    <string name="home">HOME</string>
+    <string name="chats">CHATS</string>
+    <string name="my_ads">MY ADS</string>
+    <string name="account">ACCOUNT</string>
+    <string name="sell">SELL</string>
+    <!--    Home Fragment Strings -->
+    <string name="home_search">What are you looking for ?</string>
+    <string name="see_all">See all</string>
+    <string name="categoriesHeading">Browse categories</string>
+    <string name="noCatAdsMessage">No ads yet</string>
+    <!--    Sell Fragment -->
+    <string name="sell_heading">Sell anything on Bicel</string>
+    <string-array name="categories">
+        <item name="Mobiles">Mobiles</item>
+        <item name="Cars">Cars</item>
+        <item name="Motorcycles">Motorcycles</item>
+        <item name="Houses">Houses</item>
+        <item name="Computers">Computers</item>
+    </string-array>
+    <string name="discard_ad_message">Do you want to discard this Ad?</string>
+    <string name="upload_ad_message">Are you sure to upload this Ad?</string>
+    <string name="cancel_btn">Cancel</string>
+    <string name="discard_btn">Discard</string>
+    <!--    Login Activity -->
+    <string name="login_heading">Login to Bicel</string>
+    <string name="welcome_note">Welcome back! Nice to see you again</string>
+    <string name="login_requirements">Enter Email and Password to login</string>
+    <string name="email_heading">Email*</string>"
+    <string name="email">Enter Email</string>"
+    <string name="password_heading">Password*</string>"
+    <string name="password">Enter Password</string>"
+    <string name="create_account_question">Have not created an account yet?</string>
+    <string name="create_account"><u>Create Account</u></string>
+    <!--        Signup Activity -->
+    <string name="signup_welcome_note">Welcome to Bicel !</string>
+    <string name="login_navigate"><u>Login</u></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="skip"><u>Skip</u></string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

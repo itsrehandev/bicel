@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BottomNavTextStyle">
+        <item name="android:textSize">@dimen/_9sdp</item>
+    </style>
+    <style name="homeCategoryHeadingText">
+        <item name="android:textSize">@dimen/_15sdp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginLeft">@dimen/_11sdp</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+    <style name="NoCategoryAdsTv">
+        <item name="android:text">@string/noCatAdsMessage</item>
+        <item name="android:textSize">@dimen/_20sdp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/viewpager_bg_4</item>
+        <item name="android:layout_height">@dimen/_180sdp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_margin">@dimen/_10sdp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:visibility">gone</item>
+    </style>
+    <style name="homeCategorySeeAllText">
+
+        <item name="android:text">@string/see_all</item>
+        <item name="android:textSize">@dimen/_10sdp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">@dimen/_6sdp</item>
+        <item name="android:layout_marginRight">@dimen/_5sdp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+    <style name="homeCategoryRow">
+        <item name="android:layout_marginTop">@dimen/_11sdp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+    <style name="CustomAlertDialog" parent="Theme.MaterialComponents.DayNight.Dialog.Alert">
+        <item name="android:windowMinWidthMajor">90%</item>
+        <item name="android:windowMinWidthMinor">90%</item>
+        <item name="android:windowBackground">@drawable/dialog_bg</item>
+    </style>
+    <style name="BottomAlertDialog" parent="Theme.MaterialComponents.DayNight.Dialog.Alert">
+        <item name="android:windowMinWidthMajor">100%</item>
+        <item name="android:windowMinWidthMinor">100%</item>
+        <item name="android:windowBackground">@drawable/dialog_bg</item>
+        <item name="android:windowAnimationStyle">@style/DialogSlideAnim</item>
+    </style>
+    <style name="DialogSlideAnim">
+        <item name="android:windowEnterAnimation">@anim/slide_in</item>
+        <item name="android:windowExitAnimation">@anim/slide_out</item>
+    </style>
+    <style name="CustomChipStyle" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">@color/chip_bg</item>
+        <item name="android:textColor">@color/chip_text</item>
+    </style>
+</resources>

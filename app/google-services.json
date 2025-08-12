@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "938898740907",
+    "project_id": "firstproject-d0041",
+    "storage_bucket": "firstproject-d0041.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:938898740907:android:ea30df83d7f183063a89ee",
+        "android_client_info": {
+          "package_name": "com.example.bicel"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZ6QdmcZJ66SUQcgky9eNw-vJvkx1aFgQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

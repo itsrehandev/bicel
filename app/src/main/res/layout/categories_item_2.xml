@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_marginStart="@dimen/_10sdp"
+    android:gravity="center_horizontal">
+<de.hdodenhof.circleimageview.CircleImageView
+    android:id="@+id/categoryImg"
+    android:layout_width="@dimen/_40sdp"
+    android:layout_height="@dimen/_40sdp"
+    android:src="@drawable/bicel_icon"
+    app:civ_border_width="1dp"
+    app:civ_border_color="@color/colorPrimaryLight"
+    />
+
+    <TextView
+        android:id="@+id/categoryTv"
+        android:layout_width="wrap_content"
+        android:maxWidth="@dimen/_56sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:fontFamily="@font/poppins"
+        android:textAlignment="center"
+        android:text="Home Decoration"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_10sdp" />
+</LinearLayout>

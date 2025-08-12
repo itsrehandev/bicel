@@ -1,0 +1,11 @@
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textSize="@dimen/_13sdp"
+    android:textColor="@color/black"
+    android:fontFamily="@font/blinker"
+    android:padding="@dimen/_10sdp"
+    android:background="@color/almost_white"
+    android:text="Hello World!"
+    android:layout_marginStart="@dimen/_10sdp"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

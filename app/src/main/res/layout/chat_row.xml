@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:paddingVertical="@dimen/_5sdp"
+    android:layout_height="wrap_content">
+<de.hdodenhof.circleimageview.CircleImageView
+    android:id="@+id/userImg"
+    android:layout_width="@dimen/_50sdp"
+    android:layout_height="@dimen/_50sdp"
+    android:src="@drawable/pexels_michael_block_1691617_3225517"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    android:layout_marginStart="@dimen/_10sdp"
+    />
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Muhmmad Rehan"
+        android:fontFamily="@font/barlow_medium"
+        android:textColor="@color/almost_black"
+        android:layout_marginStart="@dimen/_14sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:textSize="@dimen/_16sdp"
+        app:layout_constraintStart_toEndOf="@id/userImg"
+        app:layout_constraintTop_toTopOf="@id/userImg"
+        />
+    <TextView
+        android:id="@+id/lastMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hey How are you doing ?"
+        android:fontFamily="@font/barlow_medium"
+        android:textColor="@color/almost_black"
+        android:layout_marginStart="@dimen/_14sdp"
+        android:textSize="@dimen/_11sdp"
+        app:layout_constraintStart_toEndOf="@id/userImg"
+        app:layout_constraintTop_toBottomOf="@id/userName"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

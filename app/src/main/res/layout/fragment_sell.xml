@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/almost_white"
+    tools:context=".fragments.Sell">
+<LinearLayout
+    android:id="@+id/noLoginScreen"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+   >
+    <ImageView
+        android:layout_width="@dimen/_130sdp"
+        android:layout_height="@dimen/_130sdp"
+        android:layout_gravity="top|center"
+        android:layout_marginTop="@dimen/_100sdp"
+        android:src="@drawable/not_logged_in_person_6"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign up"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/cinzel_bold"
+            android:textStyle="bold"
+            android:textSize="@dimen/_30sdp"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_40sdp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="to sell Anything!"
+            android:textColor="@color/almost_black"
+            android:fontFamily="@font/poppins"
+            android:textSize="@dimen/_15sdp"
+        android:layout_gravity="center"
+            android:layout_marginTop="-2dp"/>
+</LinearLayout>
+    <ScrollView
+        android:id="@+id/sellScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:visibility="visible"
+        android:overScrollMode="never"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_100sdp">
+
+            <TextView
+                android:id="@+id/sell_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sell anything on "
+                android:textSize="@dimen/_20sdp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/bicel_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textSize="@dimen/_39sdp"
+                android:textColor="@color/colorPrimaryDark"
+                android:fontFamily="@font/cinzel_bold"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sell_tv" />
+
+            <TextView
+                android:id="@+id/upload_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upload Images of your product"
+                android:textSize="@dimen/_13sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:textColor="@color/black"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:fontFamily="@font/poppins"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bicel_tv" />
+
+            <ImageView
+                android:id="@+id/addImageIcon"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="@dimen/_50sdp"
+                android:layout_marginVertical="@dimen/_40sdp"
+                android:padding="@dimen/_20sdp"
+                app:layout_constraintTop_toTopOf="@id/adViewPager"
+                app:layout_constraintStart_toStartOf="@id/adViewPager"
+                app:layout_constraintEnd_toEndOf="@id/adViewPager"
+                app:layout_constraintBottom_toBottomOf="@id/adViewPager"
+                android:elevation="4dp"
+                android:src="@drawable/add_image_icon_4" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/adViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200sdp"
+                android:overScrollMode="never"
+                android:background="@drawable/viewpager_bg_4"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/upload_tv" />
+
+            <LinearLayout
+                android:id="@+id/adImageProgress"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="@color/overlay_white"
+                android:layout_margin="1.2dp"
+                android:visibility="gone"
+
+                app:layout_constraintStart_toStartOf="@id/adViewPager"
+                app:layout_constraintEnd_toEndOf="@id/adViewPager"
+                app:layout_constraintTop_toTopOf="@id/adViewPager"
+                app:layout_constraintBottom_toBottomOf="@id/adViewPager">
+
+                <ProgressBar
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:indeterminateTint="@color/colorPrimary" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/adImagesCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0/5"
+                android:textSize="@dimen/_10sdp"
+                android:textColor="@color/black"
+                android:background="@color/light_grey"
+                android:padding="@dimen/_5sdp"
+                android:gravity="center"
+                android:layout_margin="1dp"
+                app:layout_constraintEnd_toEndOf="@id/adViewPager"
+                app:layout_constraintBottom_toBottomOf="@id/adViewPager" />
+
+            <ImageView
+                android:id="@+id/addImageBtn"
+                android:layout_width="@dimen/_36sdp"
+                android:layout_height="@dimen/_36sdp"
+                android:src="@drawable/add_icon_6"
+                android:textSize="@dimen/_14sdp"
+                android:gravity="center"
+                android:elevation="5dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/blinker"
+                android:paddingVertical="@dimen/_10sdp"
+                android:background="@drawable/add_image_btn_bg_4"
+                app:layout_constraintStart_toStartOf="@id/adViewPager"
+                app:layout_constraintTop_toTopOf="@id/adViewPager"
+
+                />
+
+            <ImageView
+                android:id="@+id/delImageBtn"
+                android:layout_width="@dimen/_36sdp"
+                android:layout_height="@dimen/_36sdp"
+                android:src="@drawable/delete_icon"
+                android:visibility="gone"
+                android:gravity="center"
+                android:elevation="5dp"
+                android:padding="@dimen/_10sdp"
+                android:background="@drawable/del_image_btn_bg_sell"
+                app:layout_constraintEnd_toEndOf="@id/adViewPager"
+                app:layout_constraintTop_toTopOf="@id/adViewPager"
+                />
+
+
+            <TextView
+                android:id="@+id/imageLimitTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="You can add a maximum of 5 images"
+                android:textSize="@dimen/_10sdp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/blinker"
+                app:layout_constraintStart_toStartOf="@id/adViewPager"
+                app:layout_constraintEnd_toEndOf="@id/adViewPager"
+                app:layout_constraintTop_toBottomOf="@id/adViewPager" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/categorySpinner"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxStrokeColor="@color/colorPrimary"
+                app:hintTextColor="@color/black"
+                android:hint="Choose a category"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                app:layout_constraintTop_toBottomOf="@id/imageLimitTv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:overScrollMode="never"
+                android:scrollbars="none"
+
+                >
+
+                <AutoCompleteTextView
+                    android:id="@+id/categoryAutoComplete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_14sdp"
+                    android:paddingVertical="@dimen/_10sdp"
+                    android:paddingStart="@dimen/_35sdp"
+                    android:overScrollMode="never"
+
+                    android:scrollbars="none"
+                    android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:src="@drawable/categories_4"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_marginStart="@dimen/_8sdp"
+                app:layout_constraintStart_toStartOf="@id/categorySpinner"
+                app:layout_constraintTop_toTopOf="@id/categorySpinner"
+                app:layout_constraintBottom_toBottomOf="@id/categorySpinner" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/titleTIL"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxStrokeColor="@color/colorPrimary"
+                app:hintTextColor="@color/black"
+                android:hint="Enter Title"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                app:layout_constraintTop_toBottomOf="@id/categorySpinner"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <AutoCompleteTextView
+                    android:id="@+id/title"
+                    android:padding="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="clip_horizontal"
+                    android:textSize="@dimen/_14sdp"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/descriptionTIL"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxStrokeColor="@color/colorPrimary"
+                app:hintTextColor="@color/black"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:hint="Describe your product ..."
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                app:layout_constraintTop_toBottomOf="@id/titleTIL"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <AutoCompleteTextView
+                    android:id="@+id/description"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_15sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="clip_horizontal"
+                    android:minHeight="@dimen/_90sdp"
+                    android:textSize="@dimen/_14sdp"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    android:importantForAutofill="no"
+                    android:maxLength="700"
+                    android:inputType="text|textMultiLine" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/descCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0/700"
+                android:textSize="@dimen/_10sdp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/kumbh_sans"
+                app:layout_constraintEnd_toEndOf="@id/descriptionTIL"
+                app:layout_constraintBottom_toBottomOf="@id/descriptionTIL"
+                android:layout_marginBottom="1dp"
+                android:layout_marginEnd="3dp" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/priceTIL"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxStrokeColor="@color/colorPrimary"
+                app:hintTextColor="@color/black"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:hint="Enter Price"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                app:layout_constraintTop_toBottomOf="@id/descriptionTIL"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <AutoCompleteTextView
+                    android:id="@+id/price"
+                    android:padding="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="clip_horizontal"
+                    android:textSize="@dimen/_14sdp"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    android:inputType="number"
+                    android:imeOptions="actionDone"
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/uploadBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/save_btn_bg"
+                android:fontFamily="@font/blinker"
+                android:paddingHorizontal="@dimen/_20sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:text="Upload Ad"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13sdp"
+                android:clickable="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/cancelBtn"
+                app:layout_constraintTop_toTopOf="@+id/cancelBtn" />
+
+            <TextView
+                android:id="@+id/cancelBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:background="@drawable/cancel_btn_bg"
+                android:paddingHorizontal="@dimen/_20sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:textSize="@dimen/_13sdp"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/_60sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:fontFamily="@font/kumbh_sans"
+                android:clickable="true"
+                app:layout_constraintTop_toBottomOf="@id/priceTIL"
+                app:layout_constraintEnd_toStartOf="@id/uploadBtn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_chainStyle="packed" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</LinearLayout>

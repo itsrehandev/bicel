@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/_12sdp"
+    app:cardElevation="2dp"
+    android:layout_marginHorizontal="@dimen/_5sdp"
+    android:layout_marginVertical="@dimen/_8sdp"
+
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/_10sdp"
+        android:background="@color/card_background"
+
+        >
+        <ImageView
+            android:id="@+id/adImage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_130sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pexels_michael_block_1691617_3225517"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+
+            />
+        <TextView
+            android:id="@+id/adPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rs 320,000"
+            android:fontFamily="@font/poppins"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintTop_toBottomOf="@id/adImage"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="@dimen/_7sdp"/>
+        <ImageView
+            android:id="@+id/deleteBtn"
+            android:layout_width="@dimen/_28sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:padding="@dimen/_6sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:src="@drawable/delete_icon"
+            android:background="@drawable/delete_btn_bg_my_ads"
+            app:layout_constraintTop_toTopOf="@id/adImage"
+            app:layout_constraintEnd_toEndOf="@id/adImage"
+           />
+        <ImageView
+            android:id="@+id/editBtn"
+            android:layout_width="@dimen/_28sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:padding="@dimen/_6sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:src="@drawable/edit_icon_6"
+            android:background="@drawable/edit_btn_bg_my_ads"
+            app:layout_constraintTop_toTopOf="@id/deleteBtn"
+            app:layout_constraintEnd_toStartOf="@id/deleteBtn"
+           />
+        <TextView
+            android:id="@+id/adTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Honda Civic Reborn 2021 model used like unused"
+            android:fontFamily="@font/poppins"
+            app:layout_constraintTop_toBottomOf="@id/adPrice"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="@dimen/_12sdp"
+            android:singleLine="true"
+            android:layout_marginStart="@dimen/_7sdp"
+            />
+        <TextView
+            android:id="@+id/adLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Taxila, Wah cantt , Rawalpindi"
+            android:fontFamily="@font/poppins"
+            app:layout_constraintTop_toBottomOf="@id/adTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="@dimen/_9sdp"
+            android:singleLine="true"
+            android:layout_marginStart="@dimen/_7sdp"
+            />
+        <TextView
+            android:id="@+id/adTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="15 days ago"
+            android:fontFamily="@font/poppins"
+            app:layout_constraintTop_toBottomOf="@id/adLocation"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="@dimen/_8sdp"
+            android:singleLine="true"
+            android:layout_marginStart="@dimen/_7sdp"
+            />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

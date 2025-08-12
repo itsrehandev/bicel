@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
+    tools:context=".SignupActivity">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <LinearLayout
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/overlay_black"
+        android:gravity="center"
+        android:visibility="gone"
+        android:elevation="4dp">
+        <ProgressBar
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:indeterminateTint="@color/colorPrimary"
+            />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/welcomenote"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:textSize="@dimen/_22sdp"
+        android:textColor="@color/colorPrimary"
+        android:fontFamily="@font/cinzel_bold"
+        android:text="@string/signup_welcome_note"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <TextView
+        android:id="@+id/signupdetailsnote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_13sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:text="Please provide the following details to create a new account"
+        app:layout_constraintTop_toBottomOf="@id/welcomenote"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name*"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintBottom_toTopOf="@id/name"
+        app:layout_constraintStart_toStartOf="@id/name" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_43sdp"
+        android:background="@drawable/login_et_bg"
+        android:padding="@dimen/_10sdp"
+        android:hint="Enter Name"
+        android:textSize="@dimen/_13sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signupdetailsnote" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email*"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintBottom_toTopOf="@id/email"
+        app:layout_constraintStart_toStartOf="@id/email" />
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_13sdp"
+        android:hint="Enter Email"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        android:layout_marginTop="@dimen/_23sdp"
+        android:background="@drawable/login_et_bg"/>
+          <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone*"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintBottom_toTopOf="@id/phone"
+        app:layout_constraintStart_toStartOf="@id/phone" />
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_13sdp"
+        android:hint="Enter Phone number"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/email"
+        android:layout_marginTop="@dimen/_23sdp"
+        android:background="@drawable/login_et_bg"/>
+          <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password*"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintBottom_toTopOf="@id/password"
+        app:layout_constraintStart_toStartOf="@id/password" />
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_13sdp"
+        android:hint="Enter Passowrd"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/phone"
+        android:layout_marginTop="@dimen/_23sdp"
+        android:background="@drawable/login_et_bg"/>
+    <TextView
+        android:id="@+id/createAccountBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_55sdp"
+        android:background="@drawable/login_btn_bg"
+        android:gravity="center"
+        android:paddingVertical="@dimen/_10sdp"
+        android:paddingHorizontal="@dimen/_25sdp"
+        android:text="Create Account"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/password"
+       />
+
+    <TextView
+        android:id="@+id/logindesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:maxWidth="@dimen/_190sdp"
+        android:text="Already have an account?"
+        android:textSize="@dimen/_11sdp"
+        app:layout_constraintEnd_toStartOf="@id/loginNavigate"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createAccountBtn" />
+
+    <TextView
+        android:id="@+id/loginNavigate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login_navigate"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_12sdp"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/logindesc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/logindesc"
+        app:layout_constraintTop_toTopOf="@id/logindesc" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
